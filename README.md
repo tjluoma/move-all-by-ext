@@ -64,11 +64,17 @@ Bad:
 
 Note that *case* does not matter. JPG=jpg=jPg=JpG etc
 
-Then you are ready to search. Just tell the script where to search. For example:
+**Be sure to save the file once you have made the changes mentioned in #5 and #6!**
+
+Then you are ready to search. Just tell the script where to search. For example, to search your "Downloads" folder, use:
 
 	~/Desktop/move-all-by-ext.sh ~/Downloads/
 
-See the 'Usage' section above.
+or
+
+	~/Desktop/move-all-by-ext.sh "$HOME/Downloads/"
+
+See the 'Usage' section above for more options.
 
 ## Background ##
 
