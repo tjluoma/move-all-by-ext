@@ -35,6 +35,40 @@ You can indicate several folders at once. Just separate them with a space.
 
 * This script does not check for permission to move files from A to B. The `mv` command is perfectly capable of informing the user if insufficient privileges are encountered.
 
+## Download and Installation ##
+
+1. Download 
+[move-all-by-ext.sh](https://raw.github.com/tjluoma/move-all-by-ext/master/move-all-by-ext.sh) and save it to your Desktop. *(Optional: move it somewhere in your $PATH. But I'm going to assume that you aren't familiar with the Terminal/command line.)*
+
+2. In Finder, go to /Applications/Utilities and open the **Terminal.app**
+
+3. Make the file "executable" by pasting this line into Terminal.app:
+
+	chmod 755 ~/Desktop/move-all-by-ext.sh
+
+4. Open the file in a text editor:
+
+	open -t  ~/Desktop/move-all-by-ext.sh
+
+5. Edit the line `MOVE_TO="$HOME/Desktop/$NAME"` and change it to wherever you want the files to be moved to. 
+
+6.	(OPTIONAL) If you want to look for files which end in something other than JPG then change the line `EXT=JPG` to `EXT=foo` where 'foo' is the extension you want to search for, such as GIF or DOC or PAGES. Note: DO NOT INCLUDE A PERIOD!
+
+Good:
+
+	EXT=JPG 
+
+Bad:
+
+	EXT=.JPG
+
+Note that *case* does not matter. JPG=jpg=jPg=JpG etc
+
+Then you are ready to search. Just tell the script where to search. For example:
+
+	~/Desktop/move-all-by-ext.sh ~/Downloads/
+
+See the 'Usage' section above.
 
 ## Background ##
 
